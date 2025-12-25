@@ -76,7 +76,7 @@ scrollBtn.addEventListener('click', () => {
 })
 // ====================================================================
 const scrollBtn2 = document.querySelector('.saga-ox i')
-const saleCards2 = document.querySelector('.rating-cards')
+const saleCards2 = document.querySelector('.premium-cards-lists')
 
 scrollBtn2.addEventListener('click', () => {
   saleCards2.scrollBy({ left: 200, behavior: 'smooth' })
@@ -119,41 +119,41 @@ homePageGo.addEventListener('click', () => {
   requestAnimationFrame(step)
 })
 // ====================================================================
-document.querySelectorAll('.listing-img').forEach((container) => {
-  const images = container.querySelectorAll('img')
-  const indicatorsContainer = container.querySelector('.image-indicators')
-  const count = images.length
+// document.querySelectorAll('.premium-card-images').forEach((container) => {
+//   const images = container.querySelectorAll('img')
+//   const indicatorsContainer = container.querySelector('.image-indicators')
+//   const count = images.length
 
-  // indikatorları yarat
-  images.forEach((_, i) => {
-    const span = document.createElement('span')
-    if (i === 0) span.classList.add('active')
-    indicatorsContainer.appendChild(span)
-  })
+//   // indikatorları yarat
+//   images.forEach((_, i) => {
+//     const span = document.createElement('span')
+//     if (i === 0) span.classList.add('active')
+//     indicatorsContainer.appendChild(span)
+//   })
 
-  const indicators = indicatorsContainer.querySelectorAll('span')
+//   const indicators = indicatorsContainer.querySelectorAll('span')
 
-  container.addEventListener('mousemove', (e) => {
-    const rect = container.getBoundingClientRect()
-    const x = e.clientX - rect.left
-    const zoneWidth = rect.width / count
-    const index = Math.min(count - 1, Math.floor(x / zoneWidth))
+//   container.addEventListener('mousemove', (e) => {
+//     const rect = container.getBoundingClientRect()
+//     const x = e.clientX - rect.left
+//     const zoneWidth = rect.width / count
+//     const index = Math.min(count - 1, Math.floor(x / zoneWidth))
 
-    images.forEach((img) => (img.style.opacity = 0))
-    indicators.forEach((ind) => ind.classList.remove('active'))
+//     images.forEach((img) => (img.style.opacity = 0))
+//     indicators.forEach((ind) => ind.classList.remove('active'))
 
-    images[index].style.opacity = 1
-    indicators[index].classList.add('active')
-  })
+//     images[index].style.opacity = 1
+//     indicators[index].classList.add('active')
+//   })
 
-  container.addEventListener('mouseleave', () => {
-    images.forEach((img) => (img.style.opacity = 0))
-    indicators.forEach((ind) => ind.classList.remove('active'))
+//   container.addEventListener('mouseleave', () => {
+//     images.forEach((img) => (img.style.opacity = 0))
+//     indicators.forEach((ind) => ind.classList.remove('active'))
 
-    images[0].style.opacity = 1
-    indicators[0].classList.add('active')
-  })
-})
+//     images[0].style.opacity = 1
+//     indicators[0].classList.add('active')
+//   })
+// })
 
 // ======================================================
 
@@ -183,9 +183,9 @@ window.addEventListener('scroll', () => {
 
 // ============================================================
 
-document.querySelectorAll('.listing-meta').forEach((meta) => {
-  const views = meta.querySelector('.listing-views')
-  const time = meta.querySelector('.update-time')
+document.querySelectorAll('.premium-card-animation').forEach((meta) => {
+  const views = meta.querySelector('.pr-card-animation_1')
+  const time = meta.querySelector('.pr-card-animation_2')
 
   const duration = 6
   const offset = Math.random() * duration * -1
@@ -195,48 +195,340 @@ document.querySelectorAll('.listing-meta').forEach((meta) => {
 })
 
 // ===========================================================
-const loadMoreBtn = document.querySelector('.list-card-add')
-const listings = document.querySelector('.listings-cards')
+// const loadMoreBtn = document.querySelector('.other-mix-card-button')
+// const listings = document.querySelector('.mix-card-list')
 
+// loadMoreBtn.addEventListener('click', () => {
+//   loadMoreBtn.classList.add('loading')
+//   loadMoreBtn.innerHTML = 'Yüklənir…'
+
+//   setTimeout(() => {
+//     for (let i = 0; i < 12; i++) {
+//       const card = document.createElement('div')
+//       card.className = 'card'
+//       card.innerHTML = `
+//         <div class="mix-card">
+//           <div class="premium-card-images">
+//             <div class="icons">
+//               <i class="fa-solid fa-truck"></i>
+//               <i class="fa-solid fa-percent"></i>
+//             </div>
+//             <div class="image-indicators"></div>
+//             <img src="https://picsum.photos/800/400?random=3" alt="Thumbnail 3" />
+//             <img src="https://picsum.photos/800/400?random=4" alt="Thumbnail 3" />
+//             <img src="https://picsum.photos/800/400?random=5" alt="Thumbnail 3" />
+//             <img src="https://picsum.photos/800/400?random=6" alt="Thumbnail 3" />
+//           </div>
+//           <div class="card-body">
+//             <a href="">
+//               <p class="product-name">TNCE Smart Plug Zigbee 3.0 və ya Wi-Fi</p>
+//               <p><span class="old-price">46.97</span><span class="discount">-50%</span></p>
+//               <p class="price">23.49 AZN</p>
+//               <p class="views">👁 120 baxış</p>
+//             </a>
+//           </div>
+//         </div>
+//       `
+//       listings.appendChild(card)
+//     }
+
+//     loadMoreBtn.classList.remove('loading')
+//     loadMoreBtn.innerHTML = 'Daha Çox Göstər <i class="fa-solid fa-angle-down"></i>'
+//   }, 1200)
+// })
+
+// ===========================================================
+
+const loadMoreBtn = document.querySelector('.other-mix-card-button')
+const listings = document.querySelector('.mix-card-list')
+
+// Məhsul adları siyahısı
+const productNames = [
+  'TNCE Smart Plug Zigbee 3.0',
+  'Xiaomi Aqilli Şamdan',
+  'Philips LED Lampa',
+  'Smart Wi-Fi Kamera',
+  'Bluetooth Qulaqlıq',
+  'Ev Robot Tozsoran',
+  'Portativ Powerbank',
+  'Smart Saat',
+]
+
+// Random integer funksiyası
+function getRandomInt(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min
+}
+
+// Kartın HTML-nı random yaratmaq üçün funksiya
+function generateRandomCardHTML() {
+  const name = productNames[getRandomInt(0, productNames.length - 1)]
+  const oldPrice = getRandomInt(20, 100)
+  const discount = getRandomInt(10, 70)
+  const newPrice = ((oldPrice * (100 - discount)) / 100).toFixed(2)
+  const views = getRandomInt(50, 500)
+
+  return `
+    <div class="premium-card-images">
+      <div class="icons">
+        <i class="fa-solid fa-truck"></i>
+        <i class="fa-solid fa-percent"></i>
+      </div>
+      <div class="image-indicators"></div>
+      <img src="https://picsum.photos/800/400?random=${getRandomInt(1, 1000)}" alt="Thumbnail" />
+      <img src="https://picsum.photos/800/400?random=${getRandomInt(1001, 2000)}" alt="Thumbnail" />
+      <img src="https://picsum.photos/800/400?random=${getRandomInt(2001, 3000)}" alt="Thumbnail" />
+      <img src="https://picsum.photos/800/400?random=${getRandomInt(3001, 4000)}" alt="Thumbnail" />
+    </div>
+    <div class="card-body">
+    <div class="basket-icon">
+              <button><i class="fa-solid fa-cart-plus"></i></button>
+            </div>
+      <a href="">
+        <p class="product-name">${name}</p>
+        <p><span class="old-price">${oldPrice}</span><span class="discount">-${discount}%</span></p>
+        <p class="price">${newPrice} AZN</p>
+        <p class="views">👁 ${views} baxış</p>
+      </a>
+    </div>
+  `
+}
+
+// Hover və indikator funksiyası
+function setupImageHover(container) {
+  const images = container.querySelectorAll('img')
+  const indicatorsContainer = container.querySelector('.image-indicators')
+  indicatorsContainer.innerHTML = ''
+  const count = images.length
+
+  images.forEach((_, i) => {
+    const span = document.createElement('span')
+    if (i === 0) span.classList.add('active')
+    indicatorsContainer.appendChild(span)
+  })
+
+  const indicators = indicatorsContainer.querySelectorAll('span')
+
+  container.addEventListener('mousemove', (e) => {
+    const rect = container.getBoundingClientRect()
+    const x = e.clientX - rect.left
+    const zoneWidth = rect.width / count
+    const index = Math.min(count - 1, Math.floor(x / zoneWidth))
+
+    images.forEach((img) => (img.style.opacity = 0))
+    indicators.forEach((ind) => ind.classList.remove('active'))
+
+    images[index].style.opacity = 1
+    indicators[index].classList.add('active')
+  })
+
+  container.addEventListener('mouseleave', () => {
+    images.forEach((img) => (img.style.opacity = 0))
+    indicators.forEach((ind) => ind.classList.remove('active'))
+
+    images[0].style.opacity = 1
+    indicators[0].classList.add('active')
+  })
+
+  // İlk görüntü göstərilsin
+  images.forEach((img) => (img.style.opacity = 0))
+  images[0].style.opacity = 1
+}
+
+// Mövcud kartlar üçün hover funksiyasını aktiv et
+document.querySelectorAll('.premium-card-images').forEach(setupImageHover)
+
+// “Daha Çox Göstər” düyməsi
 loadMoreBtn.addEventListener('click', () => {
   loadMoreBtn.classList.add('loading')
   loadMoreBtn.innerHTML = 'Yüklənir…'
 
   setTimeout(() => {
+    const fragment = document.createDocumentFragment()
+
     for (let i = 0; i < 12; i++) {
       const card = document.createElement('div')
-      card.className = 'card'
-      card.innerHTML = `
-        <div class="listing-card">
-          <div class="listing-img">
-            <div class="image-indicators"></div>
-            <img src="https://picsum.photos/800/400?random=5" />
-            <img src="https://picsum.photos/800/400?random=6" />
-            <img src="https://picsum.photos/800/400?random=7" />
-            <img src="https://picsum.photos/800/400?random=8" />
-          </div>
-          <div class="listing-details">
-            <a href="#">
-              <p class="listing-title">TNCE Smart Plug Zigbee 3.0 və ya Wi-Fi</p>
-              <p class="listing-prices">
-                <span class="listing-old-price">46.97</span>
-                <span class="listing-discount">-50%</span>
-              </p>
-              <p class="listing-price">23.49 AZN</p>
-              <p class="listing-meta">
-                <span class="listing-views">👁 120 baxış</span>
-                <span class="update-time">Bu gün 20:48</span>
-              </p>
-            </a>
-          </div>
-        </div>
-      `
-      listings.appendChild(card) // ✅ DÜZGÜN
+      card.className = 'mix-card'
+      card.innerHTML = generateRandomCardHTML()
+      fragment.appendChild(card)
     }
+
+    listings.appendChild(fragment)
+
+    // Yeni yüklənən kartlar üçün hover funksiyasını əlavə et
+    listings.querySelectorAll('.premium-card-images:not([data-hovered])').forEach((container) => {
+      setupImageHover(container)
+      container.dataset.hovered = true
+    })
 
     loadMoreBtn.classList.remove('loading')
     loadMoreBtn.innerHTML = 'Daha Çox Göstər <i class="fa-solid fa-angle-down"></i>'
   }, 1200)
 })
 
-// ===========================================================
+// ===========================================================================
+// ===========================================================================
+// ===========================================================================
+// ===========================================================================
+// ===========================================================================
+// ===========================================================================
+document.addEventListener('DOMContentLoaded', () => {
+  const saleCards = document.querySelector('.sale-cards')
+  const seeAllCard = saleCards.querySelector('.see-all-card')
+
+  const productNames = [
+    'TNCE Smart Plug Zigbee 3.0',
+    'Xiaomi Ağıllı Lampa',
+    'Philips LED Panel',
+    'Wi-Fi Təhlükəsizlik Kamerası',
+    'Bluetooth Qulaqlıq',
+    'Ağıllı Rozet',
+    'Smart Saat',
+    'Portativ Powerbank',
+    'Robot Tozsoran',
+    'USB Şarj Cihazı',
+  ]
+
+  function rand(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min
+  }
+
+  function getRandomIconsHTML() {
+    const random = rand(0, 3)
+    let icons = ''
+
+    if (random === 1) icons = `<i class="fa-solid fa-truck"></i>`
+    if (random === 2) icons = `<i class="fa-solid fa-percent"></i>`
+    if (random === 3)
+      icons = `
+        <i class="fa-solid fa-truck"></i>
+        <i class="fa-solid fa-percent"></i>
+      `
+
+    return icons
+  }
+
+  function createRandomCard() {
+    const name = productNames[rand(0, productNames.length - 1)]
+    const oldPrice = rand(30, 150)
+    const discount = rand(10, 70)
+    const newPrice = ((oldPrice * (100 - discount)) / 100).toFixed(2)
+    const imgId = rand(1, 1000)
+
+    const card = document.createElement('div')
+    card.className = 'card'
+
+    card.innerHTML = `
+      <div class="product-img">
+        <div class="icons">
+          ${getRandomIconsHTML()}
+        </div>
+        <img src="https://picsum.photos/400/400?random=${imgId}" alt="Məhsul" />
+      </div>
+
+      <div class="card-body">
+        <div class="basket-icon">
+          <button><i class="fa-solid fa-cart-plus"></i></button>
+        </div>
+        <a href="" target="_blank">
+          <p>
+            <span class="old-price">${oldPrice}</span>
+            <span class="discount">-${discount}%</span>
+          </p>
+          <p class="price">${newPrice} AZN</p>
+          <p class="product-name">${name}</p>
+        </a>
+      </div>
+    `
+
+    return card
+  }
+
+  // 🟢 Səhifə açılanda 30 kart əlavə et
+  for (let i = 0; i < 30; i++) {
+    saleCards.insertBefore(createRandomCard(), seeAllCard)
+  }
+})
+// =================================================================================
+// =================================================================================
+// =================================================================================
+// =================================================================================
+// =================================================================================
+// =================================================================================
+// =================================================================================
+// =================================================================================
+document.addEventListener('DOMContentLoaded', () => {
+  const list = document.querySelector('.premium-cards-lists')
+  const template = document.querySelector('.premium-card:not(.a7)')
+
+  // template kartı saxla, sonra sil
+  const baseCard = template.cloneNode(true)
+  template.remove()
+
+  const names = [
+    'TNCE Smart Plug Zigbee 3.0',
+    'Apple AirPods Pro',
+    'Samsung Galaxy Watch 6',
+    'Xiaomi Mi Band 8',
+    'Logitech MX Master 3',
+    'Anker Fast Charger 65W',
+    'Sony WH-1000XM5',
+    'Baseus Powerbank 20000mAh',
+    'Philips Air Fryer XL',
+    'JBL Flip 6 Bluetooth Speaker',
+  ]
+
+  function rand(arr) {
+    return arr[Math.floor(Math.random() * arr.length)]
+  }
+
+  function randomPrice() {
+    const oldPrice = (Math.random() * 300 + 40).toFixed(2)
+    const discount = [10, 20, 30, 40, 50][Math.floor(Math.random() * 5)]
+    const newPrice = (oldPrice * (1 - discount / 100)).toFixed(2)
+
+    return { oldPrice, discount, newPrice }
+  }
+
+  function randomViews() {
+    return Math.floor(Math.random() * 5000 + 50)
+  }
+
+  function randomTime() {
+    const d = Math.floor(Math.random() * 7)
+    const h = Math.floor(Math.random() * 24)
+      .toString()
+      .padStart(2, '0')
+    const m = Math.floor(Math.random() * 60)
+      .toString()
+      .padStart(2, '0')
+
+    if (d === 0) return `Bu gün ${h}:${m}`
+    if (d === 1) return `Dünən ${h}:${m}`
+    return `${d} gün əvvəl ${h}:${m}`
+  }
+
+  for (let i = 0; i < 30; i++) {
+    const card = baseCard.cloneNode(true)
+
+    /* ===== TEXT ===== */
+    card.querySelector('.premium-card-name').textContent = rand(names)
+
+    const price = randomPrice()
+    card.querySelector('.premium-card-old-price').textContent = price.oldPrice
+    card.querySelector('.premium-card-discount').textContent = `-${price.discount}%`
+    card.querySelector('.premium-card-new-price').textContent = `${price.newPrice} AZN`
+
+    card.querySelector('.pr-card-animation_1').textContent = `👁 ${randomViews()} baxış`
+    card.querySelector('.pr-card-animation_2').textContent = randomTime()
+
+    /* ===== IMAGES ===== */
+    const imgs = card.querySelectorAll('.premium-card-images img')
+    const start = Math.floor(Math.random() * 500)
+
+    imgs.forEach((img, index) => {
+      img.src = `https://picsum.photos/800/400?random=${start + index}`
+    })
+
+    list.insertBefore(card, list.querySelector('.a7'))
+  }
+})
