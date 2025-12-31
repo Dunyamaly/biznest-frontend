@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BizNest.az Biznesini qur və səndə qazan</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      .head h2 {
+        margin: 5px 0 25px;
+      }
+      .mix-card {
+        max-width: 154px;
+      }
+      .card-in {
+        display: block;
+      }
+      .premium-card-images {
+        height: 134px;
+      }
+      .mix-card-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 154px);
+        gap: 18px 10px;
+        justify-content: start;
+      }
+      .fa-trash-can {
+        font-size: 12px;
+      }
+      .basket button {
+        width: 30px;
+        height: 30px;
+        background: #111;
+        color: #ffffff;
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+        opacity: 0;
+        transition: 0.2s;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav>
+      <div class="nav-logo"><a href="../index.html">BizNest</a></div>
+      <div class="nav-section">
+        <ul>
+          <li><a href="../html/listing.html">Elanlar</a></li>
+          <li><a href="../html/service.html">Xidmətlər</a></li>
+          <li><a href="../html/shop.html">Mağazalar</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-search">
+        <i class="fa fa-search"></i>
+        <input type="text" placeholder="Axtar..." name="search" />
+        <button class="search-btn">Axtar</button>
+      </div>
+      <div class="nav-language">
+        <div class="language-dropdown">
+          <button class="language-dropbtn">AZ</button>
+          <div class="language-dropdown-content">
+            <a href="#">RU</a>
+            <a href="#">EN</a>
+          </div>
+        </div>
+      </div>
+      <div class="nav-basket">
+        <a href="">🛒<sup class="basket-count">0</sup></a>
+      </div>
+      <div class="nav-auth"><a href="">Giriş</a> / <a href="">Qeydiyyat</a></div>
+
+      <div class="mobile-menu-toggle">☰</div>
+    </nav>
+
+    <!-- Top -->
+    <!-- =============================================== -->
+    <div class="top-go" id="homePageGo">
+      <i class="fa-solid fa-angles-up"></i>
+    </div>
+
+    <!-- Basket -->
+    <!-- =============================================== -->
+    <div class="category-block" style="margin-top: 80px; min-height: 500px">
+      <div class="head">
+        <h2>Seçilmişlər (0)</h2>
+      </div>
+
+      <div class="mix-card-list">
+        <div class="mix-card">
+          <div class="premium-card-images">
+            <div class="icons">
+              <i class="fa-solid fa-percent"></i>
+              <i class="fa-solid fa-gem"></i>
+            </div>
+            <div class="image-indicators"></div>
+            <img src="https://picsum.photos/800/400?random=3" alt="Thumbnail 3" />
+            <img src="https://picsum.photos/800/400?random=4" alt="Thumbnail 3" />
+            <img src="https://picsum.photos/800/400?random=5" alt="Thumbnail 3" />
+            <img src="https://picsum.photos/800/400?random=6" alt="Thumbnail 3" />
+          </div>
+          <div class="card-body">
+            <div class="basket">
+              <button><i class="fa-solid fa-trash-can"></i></button>
+            </div>
+            <a href=""
+              ><div class="card-in">
+                <div class="product-name">TNCE Smart Plug Zigbee 3.0 və ya Wi-Fi</div>
+
+                <div class="pr-card-sale">
+                  <span class="old-price">80</span>
+                  <span class="discount">-18%</span>
+                </div>
+                <div class="price">23.49 AZN</div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <!-- =============================================== -->
+    <footer>
+      <div class="footer-info">
+        <h3>biznest.az</h3>
+        <p><a href="">Layihə haqqında</a></p>
+        <p><a href="">Qaydalar</a></p>
+        <p><a href="">Dəstək mərkəzi və tez-tez verilən suallar </a></p>
+
+        <h3>Menu</h3>
+        <p><a href="../html/listing.html">Elanlar</a></p>
+        <p><a href="../html/service.html">Xidmət və Servis</a></p>
+        <p><a href="../html/shop.html">Mağazalar</a></p>
+      </div>
+      <div class="footer-contact">
+        <form action="">
+          <input type="text" placeholder="Ad Soyad" /><br />
+          <input type="email" placeholder="Email" /><br />
+          <input type="text" placeholder="Başlıq" /><br />
+          <textarea placeholder="Mesaj"></textarea>
+          <button class="message-send">Göndər</button>
+        </form>
+        <div class="sosial-media">
+          <a href=""><i class="fa-brands fa-instagram"></i></a>
+          <a href=""><i class="fa-brands fa-facebook"></i></a>
+          <a href=""><i class="fa-brands fa-tiktok"></i></a>
+        </div>
+      </div>
+    </footer>
+    <script src="../js/navbar.js"></script>
+    <script src="../js/premium-cards.js"></script>
+    <script src="../js/back-to-top.js"></script>
+  </body>
+</html>

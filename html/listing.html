@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="az">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Elanlar</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/listingPage.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav>
+      <div class="nav-logo"><a href="../index.html">BizNest</a></div>
+      <div class="nav-section">
+        <ul>
+          <li><a href="../html/listing.html">Elanlar</a></li>
+          <li><a href="../html/service.html">Xidmətlər</a></li>
+          <li><a href="../html/shop.html">Mağazalar</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-search">
+        <i class="fa fa-search"></i>
+        <input type="text" placeholder="Axtar..." name="search" />
+        <button class="search-btn">Axtar</button>
+      </div>
+      <div class="nav-language">
+        <div class="language-dropdown">
+          <button class="language-dropbtn">AZ</button>
+          <div class="language-dropdown-content">
+            <a href="#">RU</a>
+            <a href="#">EN</a>
+          </div>
+        </div>
+      </div>
+      <div class="nav-basket">
+        <a href="">🛒<sup class="basket-count">0</sup></a>
+      </div>
+      <div class="nav-auth"><a href="">Giriş</a> / <a href="">Qeydiyyat</a></div>
+
+      <div class="mobile-menu-toggle">☰</div>
+    </nav>
+
+    <!-- Top -->
+    <!-- =============================================== -->
+    <div class="top-go" id="homePageGo">
+      <i class="fa-solid fa-angles-up"></i>
+    </div>
+
+    <!-- ========================================================== -->
+
+    <div class="shop-page">
+      <!-- Sol filter -->
+      <aside class="shop-filters">
+        <h3>Filtrlər</h3>
+
+        <div class="filter-group">
+          <label>Kateqoriya</label>
+          <select id="categoryFilter">
+            <option value="">Hamısı</option>
+            <option>Elektronika</option>
+            <option>Parfumeriya</option>
+            <option>Geyim</option>
+          </select>
+        </div>
+
+        <div class="filter-group">
+          <label>Göstər</label>
+          <label class="check"><input type="checkbox" data-filter="discount" /> Endirimdə</label>
+          <label class="check"><input type="checkbox" data-filter="premium" /> Premium</label>
+        </div>
+
+        <h5>Ünvan</h5>
+        <div class="filter-group address">
+          <label class="check"><input type="checkbox" data-location="Hamısı" /> Hamısı</label>
+          <label class="check"><input type="checkbox" data-location="Bakı" /> Bakı</label>
+          <label class="check"><input type="checkbox" data-location="Şirvan" /> Şirvan</label>
+          <label class="check"><input type="checkbox" data-location="Sumqayıt" /> Sumqayıt</label>
+          <label class="check"><input type="checkbox" data-location="Lənkəran" /> Lənkəran</label>
+          <label class="check"><input type="checkbox" data-location="Zərdab" /> Zərdab</label>
+          <label class="check"><input type="checkbox" data-location="Qusar" /> Qusar</label>
+        </div>
+
+        <div class="filter-group">
+          <label>Sıralama</label>
+          <select id="sortFilter">
+            <option value="newest">Ən yeni</option>
+            <option value="price-asc">Əvvəl ucuz</option>
+            <option value="price-desc">Əvvəl baha</option>
+          </select>
+        </div>
+      </aside>
+
+      <!-- Sağ tərəf -->
+      <div class="shop-content">
+        <div class="shop-list">
+          <!-- Kart nümunələri -->
+          <div
+            class="advertising-card"
+            data-category="Elektronika"
+            data-location="Bakı"
+            data-premium="true"
+            data-discount="true"
+            data-price="960"
+            data-created="2025-12-28T12:30:00"
+          >
+            <div class="advertising-card-images">
+              <div class="advertising-card-info-icon">
+                <i class="fa-solid fa-percent"></i>
+                <i class="fa-solid fa-gem"></i>
+              </div>
+              <div class="image-indicators"></div>
+              <img src="https://picsum.photos/300/200?random=13" alt="Thumbnail 1" />
+              <img src="https://picsum.photos/300/200?random=20" alt="Thumbnail 1" />
+              <img src="https://picsum.photos/300/200?random=14" alt="Thumbnail 1" />
+              <img src="https://picsum.photos/300/200?random=19" alt="Thumbnail 1" />
+            </div>
+            <div class="advertising-card-detail">
+              <div class="basket">
+                <button><i class="fa-solid fa-cart-plus"></i></button>
+              </div>
+              <a href=""
+                ><div class="bura">
+                  <div class="advertising-card-name">Smart TV 55" Ultra HD</div>
+                  <!-- <div class="advertising-card-sale">
+                  <span class="advertising-card-old-price">1200</span>
+                  <span class="advertising-card-discount">-20%</span>
+                </div> -->
+                  <div class="advertising-card-new-price">960 AZN</div>
+                  <div class="advertising-card-bottom">
+                    <p>
+                      <span class="advertising-card-animation_1">👁 350 baxış</span>
+                      <span class="advertising-card-animation_2">Bu gün 12:30</span>
+                    </p>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="advertising-card"
+            data-category="Geyim"
+            data-location="Bakı"
+            data-premium="false"
+            data-discount="true"
+            data-price="120"
+            data-created="2025-12-25T10:00:00"
+          >
+            <div class="advertising-card-images">
+              <div class="advertising-card-info-icon">
+                <i class="fa-solid fa-percent"></i>
+              </div>
+              <div class="image-indicators"></div>
+              <img src="https://picsum.photos/300/200?random=21" alt="Thumbnail 1" />
+              <img src="https://picsum.photos/300/200?random=22" alt="Thumbnail 2" />
+              <img src="https://picsum.photos/300/200?random=23" alt="Thumbnail 3" />
+            </div>
+            <div class="advertising-card-detail">
+              <div class="basket">
+                <button><i class="fa-solid fa-cart-plus"></i></button>
+              </div>
+              <a href=""
+                ><div class="bura">
+                  <div class="advertising-card-name">Qadın yaz payız gödəkçəsi – rahat və şık</div>
+                  <div class="advertising-card-sale">
+                    <span class="advertising-card-old-price">150</span>
+                    <span class="advertising-card-discount">-20%</span>
+                  </div>
+                  <div class="advertising-card-new-price">120 AZN</div>
+                  <div class="advertising-card-bottom">
+                    <p>
+                      <span class="advertising-card-animation_1">👁 210 baxış</span>
+                      <span class="advertising-card-animation_2">Dünən 14:20</span>
+                    </p>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="advertising-card"
+            data-category="Elektronika"
+            data-location="Sumqayıt"
+            data-premium="true"
+            data-discount="false"
+            data-price="350"
+            data-created="2025-12-27T09:15:00"
+          >
+            <div class="advertising-card-images">
+              <div class="advertising-card-info-icon">
+                <i class="fa-solid fa-percent"></i>
+                <i class="fa-solid fa-gem"></i>
+              </div>
+              <div class="image-indicators"></div>
+              <img src="https://picsum.photos/300/200?random=24" alt="Thumbnail 1" />
+              <img src="https://picsum.photos/300/200?random=25" alt="Thumbnail 2" />
+            </div>
+            <div class="advertising-card-detail">
+              <div class="basket">
+                <button><i class="fa-solid fa-cart-plus"></i></button>
+              </div>
+              <a href=""
+                ><div class="bura">
+                  <div class="advertising-card-name">
+                    Simsiz qulaqlıq – Bluetooth 5.0, uzun batareya
+                  </div>
+                  <div class="advertising-card-sale">
+                    <!-- Endirim yoxdur -->
+                  </div>
+                  <div class="advertising-card-new-price">350 AZN</div>
+
+                  <div class="advertising-card-bottom">
+                    <p>
+                      <span class="advertising-card-animation_1">👁 480 baxış</span>
+                      <span class="advertising-card-animation_2">Bu gün 11:45</span>
+                    </p>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="advertising-card"
+            data-category="Parfumeriya"
+            data-location="Lənkəran"
+            data-premium="true"
+            data-discount="true"
+            data-price="75"
+            data-created="2025-12-26T16:30:00"
+          >
+            <div class="advertising-card-images">
+              <div class="advertising-card-info-icon">
+                <i class="fa-solid fa-percent"></i>
+                <i class="fa-solid fa-gem"></i>
+              </div>
+              <div class="image-indicators"></div>
+              <img src="https://picsum.photos/300/200?random=26" alt="Thumbnail 1" />
+              <img src="https://picsum.photos/300/200?random=27" alt="Thumbnail 2" />
+              <img src="https://picsum.photos/300/200?random=28" alt="Thumbnail 3" />
+              <img src="https://picsum.photos/300/200?random=29" alt="Thumbnail 4" />
+            </div>
+            <div class="advertising-card-detail">
+              <div class="basket">
+                <button><i class="fa-solid fa-cart-plus"></i></button>
+              </div>
+              <a href=""
+                ><div class="bura">
+                  <div class="advertising-card-name">Qadın ətiri – gül və vanil notları ilə</div>
+                  <div class="advertising-card-sale">
+                    <span class="advertising-card-old-price">90</span>
+                    <span class="advertising-card-discount">-15%</span>
+                  </div>
+                  <div class="advertising-card-new-price">75 AZN</div>
+
+                  <div class="advertising-card-bottom">
+                    <p>
+                      <span class="advertising-card-animation_1">👁 120 baxış</span>
+                      <span class="advertising-card-animation_2">Bu gün 10:00</span>
+                    </p>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <!-- Kart 1 -->
+          <div
+            class="advertising-card"
+            data-category="Elektronika"
+            data-location="Bakı"
+            data-premium="true"
+            data-discount="true"
+            data-price="420"
+            data-created="2025-12-27T18:10:00"
+          >
+            <div class="advertising-card-images">
+              <div class="advertising-card-info-icon">
+                <i class="fa-solid fa-percent"></i>
+                <i class="fa-solid fa-gem"></i>
+              </div>
+              <div class="image-indicators"></div>
+              <img src="https://picsum.photos/300/200?random=31" />
+              <img src="https://picsum.photos/300/200?random=32" />
+            </div>
+            <div class="advertising-card-detail">
+              <div class="basket">
+                <button><i class="fa-solid fa-cart-plus"></i></button>
+              </div>
+              <a href="">
+                <div class="bura">
+                  <div class="advertising-card-name">Bluetooth qulaqlıq – noise cancelling</div>
+                  <div class="advertising-card-sale">
+                    <span class="advertising-card-old-price">500</span>
+                    <span class="advertising-card-discount">-16%</span>
+                  </div>
+                  <div class="advertising-card-new-price">420 AZN</div>
+                  <div class="advertising-card-bottom">
+                    <p>
+                      <span>👁 640 baxış</span>
+                      <span>Dünən 19:05</span>
+                    </p>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <!-- Kart 2 -->
+          <div
+            class="advertising-card"
+            data-category="Geyim"
+            data-location="Gəncə"
+            data-premium="false"
+            data-discount="false"
+            data-price="89"
+            data-created="2025-12-26T14:20:00"
+          >
+            <div class="advertising-card-images">
+              <div class="image-indicators"></div>
+              <img src="https://picsum.photos/300/200?random=33" />
+              <img src="https://picsum.photos/300/200?random=31" />
+            </div>
+            <div class="advertising-card-detail">
+              <div class="basket">
+                <button><i class="fa-solid fa-cart-plus"></i></button>
+              </div>
+              <a href="">
+                <div class="bura">
+                  <div class="advertising-card-name">Kişi köynəyi – pambıq, slim fit</div>
+                  <div class="advertising-card-new-price">89 AZN</div>
+                  <div class="advertising-card-bottom">
+                    <p>
+                      <span>👁 210 baxış</span>
+                      <span>Bu gün 09:40</span>
+                    </p>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <!-- Kart 3 -->
+          <div
+            class="advertising-card"
+            data-category="Ev əşyaları"
+            data-location="Sumqayıt"
+            data-premium="true"
+            data-discount="true"
+            data-price="65"
+            data-created="2025-12-25T11:50:00"
+          >
+            <div class="advertising-card-images">
+              <div class="advertising-card-info-icon">
+                <i class="fa-solid fa-percent"></i>
+                <i class="fa-solid fa-gem"></i>
+              </div>
+              <div class="image-indicators"></div>
+              <img src="https://picsum.photos/300/200?random=34" />
+              <img src="https://picsum.photos/300/200?random=348" />
+              <img src="https://picsum.photos/300/200?random=31" />
+              <img src="https://picsum.photos/300/200?random=32" />
+              <img src="https://picsum.photos/300/200?random=33" />
+              <img src="https://picsum.photos/300/200?random=35" />
+              <img src="https://picsum.photos/300/200?random=36" />
+              <img src="https://picsum.photos/300/200?random=37" />
+              <img src="https://picsum.photos/300/200?random=38" />
+            </div>
+            <div class="advertising-card-detail">
+              <div class="basket">
+                <button><i class="fa-solid fa-cart-plus"></i></button>
+              </div>
+              <a href="">
+                <div class="bura">
+                  <div class="advertising-card-name">Dekorativ masa lampası</div>
+                  <div class="advertising-card-sale">
+                    <span class="advertising-card-old-price">80</span>
+                    <span class="advertising-card-discount">-18%</span>
+                  </div>
+                  <div class="advertising-card-new-price">65 AZN</div>
+                  <div class="advertising-card-bottom">
+                    <p>
+                      <span>👁 95 baxış</span>
+                      <span>3 gün əvvəl</span>
+                    </p>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <!-- Kart 4 -->
+          <div
+            class="advertising-card"
+            data-category="Parfumeriya"
+            data-location="Bakı"
+            data-premium="true"
+            data-discount="false"
+            data-price="110"
+            data-created="2025-12-28T10:15:00"
+          >
+            <div class="advertising-card-images">
+              <div class="advertising-card-info-icon">
+                <i class="fa-solid fa-gem"></i>
+              </div>
+              <div class="image-indicators"></div>
+              <img src="https://picsum.photos/300/200?random=35" />
+              <img src="https://picsum.photos/300/200?random=65" />
+            </div>
+            <div class="advertising-card-detail">
+              <div class="basket">
+                <button><i class="fa-solid fa-cart-plus"></i></button>
+              </div>
+              <a href="">
+                <div class="bura">
+                  <div class="advertising-card-name">Kişi ətri – odunsu notlar</div>
+                  <div class="advertising-card-new-price">110 AZN</div>
+                  <div class="advertising-card-bottom">
+                    <p>
+                      <span>👁 380 baxış</span>
+                      <span>Bu gün 10:15</span>
+                    </p>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <!-- Kart 5 -->
+          <div
+            class="advertising-card"
+            data-category="Aksesuar"
+            data-location="Şəki"
+            data-premium="false"
+            data-discount="true"
+            data-price="45"
+            data-created="2025-12-24T17:00:00"
+          >
+            <div class="advertising-card-images">
+              <div class="advertising-card-info-icon">
+                <i class="fa-solid fa-percent"></i>
+              </div>
+              <div class="image-indicators"></div>
+              <img src="https://picsum.photos/300/200?random=36" />
+              <img src="https://picsum.photos/300/200?random=42" />
+              <img src="https://picsum.photos/300/200?random=343" />
+            </div>
+            <div class="advertising-card-detail">
+              <div class="basket">
+                <button><i class="fa-solid fa-cart-plus"></i></button>
+              </div>
+              <a href="">
+                <div class="bura">
+                  <div class="advertising-card-name">Dəri pulqabı – əl işi</div>
+                  <div class="advertising-card-sale">
+                    <span class="advertising-card-old-price">60</span>
+                    <span class="advertising-card-discount">-25%</span>
+                  </div>
+                  <div class="advertising-card-new-price">45 AZN</div>
+                  <div class="advertising-card-bottom">
+                    <p>
+                      <span>👁 160 baxış</span>
+                      <span>4 gün əvvəl</span>
+                    </p>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <!-- =============================================== -->
+    <footer>
+      <div class="footer-info">
+        <h3>biznest.az</h3>
+        <p><a href="">Layihə haqqında</a></p>
+        <p><a href="">Qaydalar</a></p>
+        <p><a href="">Dəstək mərkəzi və tez-tez verilən suallar </a></p>
+
+        <h3>Menu</h3>
+        <p><a href="../html/listing.html">Elanlar</a></p>
+        <p><a href="../html/service.html">Xidmət və Servis</a></p>
+        <p><a href="../html/shop.html">Mağazalar</a></p>
+      </div>
+      <div class="footer-contact">
+        <form action="">
+          <input type="text" placeholder="Ad Soyad" /><br />
+          <input type="email" placeholder="Email" /><br />
+          <input type="text" placeholder="Başlıq" /><br />
+          <textarea placeholder="Mesaj"></textarea>
+          <button class="message-send">Göndər</button>
+        </form>
+        <div class="sosial-media">
+          <a href=""><i class="fa-brands fa-instagram"></i></a>
+          <a href=""><i class="fa-brands fa-facebook"></i></a>
+          <a href=""><i class="fa-brands fa-tiktok"></i></a>
+        </div>
+      </div>
+    </footer>
+    <script src="../js/navbar.js"></script>
+    <script src="../js/back-to-top.js"></script>
+    <script src="../js/listingCategory.js"></script>
+    <script src="../js/imageHover.js"></script>
+  </body>
+</html>

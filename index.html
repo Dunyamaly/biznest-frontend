@@ -16,13 +16,12 @@
   <body>
     <!-- Navbar -->
     <nav>
-      <div class="nav-logo"><a href="">BizNest</a></div>
+      <div class="nav-logo"><a href="../index.html">BizNest</a></div>
       <div class="nav-section">
         <ul>
-          <li><a href="">Mağazalar</a></li>
-          <li><a href="">Endirimlər</a></li>
-          <li><a href="">Frilanslar</a></li>
-          <li><a href="">Elanlar</a></li>
+          <li><a href="../html/listing.html">Elanlar</a></li>
+          <li><a href="../html/service.html">Xidmətlər</a></li>
+          <li><a href="../html/shop.html">Mağazalar</a></li>
         </ul>
       </div>
 
@@ -31,7 +30,18 @@
         <input type="text" placeholder="Axtar..." name="search" />
         <button class="search-btn">Axtar</button>
       </div>
-      <div class="nav-language">AZ</div>
+      <div class="nav-language">
+        <div class="language-dropdown">
+          <button class="language-dropbtn">AZ</button>
+          <div class="language-dropdown-content">
+            <a href="#">RU</a>
+            <a href="#">EN</a>
+          </div>
+        </div>
+      </div>
+      <div class="nav-basket">
+        <a href="../html/basket.html">🛒<sup class="basket-count">0</sup></a>
+      </div>
       <div class="nav-auth"><a href="">Giriş</a> / <a href="">Qeydiyyat</a></div>
 
       <div class="mobile-menu-toggle">☰</div>
@@ -93,25 +103,37 @@
         <i class="fa-solid fa-arrow-right"></i>
       </div>
       <div class="sale-cards">
-        <div class="card">
-          <div class="product-img">
+        <div class="mix-card card">
+          <div class="premium-card-images">
             <div class="icons">
-              <i class="fa-solid fa-truck"></i>
               <i class="fa-solid fa-percent"></i>
+              <i class="fa-solid fa-gem"></i>
             </div>
-            <img src="../img/mehsul11.jpg" alt="Məhsul" />
+            <div class="image-indicators"></div>
+            <img src="https://picsum.photos/800/400?random=3" alt="Thumbnail 3" />
+            <img src="https://picsum.photos/800/400?random=4" alt="Thumbnail 3" />
+            <img src="https://picsum.photos/800/400?random=5" alt="Thumbnail 3" />
+            <img src="https://picsum.photos/800/400?random=6" alt="Thumbnail 3" />
           </div>
-
           <div class="card-body">
-            <div class="basket-icon">
+            <div class="basket">
               <button><i class="fa-solid fa-cart-plus"></i></button>
             </div>
-            <a href="" target="_blank">
-              <p><span class="old-price">46.97</span><span class="discount">-50%</span></p>
-
-              <p class="price">23.49 AZN</p>
-
-              <p class="product-name">TNCE Smart Plug Zigbee 3.0 və ya Wi-Fi</p>
+            <a href=""
+              ><div class="card-in">
+                <div class="price">23.49 AZN</div>
+                <div class="pr-card-sale">
+                  <span class="old-price">80</span>
+                  <span class="discount">-18%</span>
+                </div>
+                <div class="product-name">TNCE Smart Plug Zigbee 3.0 və ya Wi-Fi</div>
+                <div class="card-bottom-info">
+                  <p>
+                    <span>👁 95 baxış</span>
+                    <span>3 gün əvvəl</span>
+                  </p>
+                </div>
+              </div>
             </a>
           </div>
         </div>
@@ -145,33 +167,40 @@
         <i class="fa-solid fa-arrow-right"></i>
       </div>
       <div class="premium-cards-lists">
-        <div class="premium-card">
+        <div class="mix-card">
           <div class="premium-card-images">
+            <div class="icons">
+              <i class="fa-solid fa-percent"></i>
+              <i class="fa-solid fa-gem"></i>
+            </div>
             <div class="image-indicators"></div>
-            <img src="https://picsum.photos/800/400?random=31" alt="Thumbnail 3" />
-            <img src="https://picsum.photos/800/400?random=42" alt="Thumbnail 3" />
-            <img src="https://picsum.photos/800/400?random=56" alt="Thumbnail 3" />
-            <img src="https://picsum.photos/800/400?random=64" alt="Thumbnail 3" />
+            <img src="https://picsum.photos/800/400?random=3" alt="Thumbnail 3" />
+            <img src="https://picsum.photos/800/400?random=4" alt="Thumbnail 3" />
+            <img src="https://picsum.photos/800/400?random=5" alt="Thumbnail 3" />
+            <img src="https://picsum.photos/800/400?random=6" alt="Thumbnail 3" />
           </div>
-          <div class="premium-card-detail">
-            <div class="basket-icon">
+          <div class="card-body">
+            <div class="basket">
               <button><i class="fa-solid fa-cart-plus"></i></button>
             </div>
-            <a href="">
-              <p class="premium-card-name">TNCE Smart Plug Zigbee 3.0 və ya Wi-Fi</p>
-              <p class="premium-card-sale">
-                <span class="premium-card-old-price">46.97</span>
-                <span class="premium-card-discount">-50%</span>
-              </p>
-              <p class="premium-card-new-price">23.49 AZN</p>
+            <a href=""
+              ><div class="card-in">
+                <div class="product-name">TNCE Smart Plug Zigbee 3.0 və ya Wi-Fi</div>
 
-              <p class="premium-card-animation">
-                <span class="pr-card-animation_1">👁 120 baxış</span>
-                <span class="pr-card-animation_2">Bu gün 20:48</span>
-              </p>
+                <div class="pr-card-sale">
+                  <span class="old-price">80</span>
+                  <span class="discount">-18%</span>
+                </div>
+                <div class="price">23.49 AZN</div>
+                <div class="card-bottom-info">
+                  <p>
+                    <span>👁 95 baxış</span>
+                    <span>3 gün əvvəl</span>
+                  </p>
+                </div>
+              </div>
             </a>
           </div>
-          <div class="card-gem"><i class="fa-regular fa-gem"></i></div>
         </div>
 
         <div class="premium-card mix-card a7">
@@ -232,8 +261,8 @@
         <div class="mix-card">
           <div class="premium-card-images">
             <div class="icons">
-              <i class="fa-solid fa-truck"></i>
               <i class="fa-solid fa-percent"></i>
+              <i class="fa-solid fa-gem"></i>
             </div>
             <div class="image-indicators"></div>
             <img src="https://picsum.photos/800/400?random=3" alt="Thumbnail 3" />
@@ -242,14 +271,25 @@
             <img src="https://picsum.photos/800/400?random=6" alt="Thumbnail 3" />
           </div>
           <div class="card-body">
-            <div class="basket-icon">
+            <div class="basket">
               <button><i class="fa-solid fa-cart-plus"></i></button>
             </div>
-            <a href="">
-              <p class="product-name">TNCE Smart Plug Zigbee 3.0 və ya Wi-Fi</p>
-              <p><span class="old-price">46.97</span><span class="discount">-50%</span></p>
-              <p class="price">23.49 AZN</p>
-              <p class="views">👁 120 baxış</p>
+            <a href=""
+              ><div class="card-in">
+                <div class="product-name">TNCE Smart Plug Zigbee 3.0 və ya Wi-Fi</div>
+
+                <div class="pr-card-sale">
+                  <span class="old-price">80</span>
+                  <span class="discount">-18%</span>
+                </div>
+                <div class="price">23.49 AZN</div>
+                <div class="card-bottom-info">
+                  <p>
+                    <span>👁 95 baxış</span>
+                    <span>3 gün əvvəl</span>
+                  </p>
+                </div>
+              </div>
             </a>
           </div>
         </div>
@@ -272,10 +312,9 @@
         <p><a href="">Dəstək mərkəzi və tez-tez verilən suallar </a></p>
 
         <h3>Menu</h3>
-        <p><a href="">Mağazalar</a></p>
-        <p><a href="">Xüsusi Endirim</a></p>
-        <p><a href="">Xidmət və Servis</a></p>
-        <p><a href="">Elanlar</a></p>
+        <p><a href="../html/listing.html">Elanlar</a></p>
+        <p><a href="../html/service.html">Xidmət və Servis</a></p>
+        <p><a href="../html/shop.html">Mağazalar</a></p>
       </div>
       <div class="footer-contact">
         <form action="">
@@ -292,6 +331,11 @@
         </div>
       </div>
     </footer>
-    <script src="../js/main.js"></script>
+    <script src="../js/navbar.js"></script>
+    <script src="../js/slider.js"></script>
+    <script src="../js/sale-cards.js"></script>
+    <script src="../js/premium-cards.js"></script>
+    <script src="../js/categories.js"></script>
+    <script src="../js/back-to-top.js"></script>
   </body>
 </html>

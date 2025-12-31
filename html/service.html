@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/servicePage.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BizNest.az Biznesini qur və səndə qazan</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav>
+      <div class="nav-logo"><a href="../index.html">BizNest</a></div>
+      <div class="nav-section">
+        <ul>
+          <li><a href="../html/listing.html">Elanlar</a></li>
+          <li><a href="../html/service.html">Xidmətlər</a></li>
+          <li><a href="../html/shop.html">Mağazalar</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-search">
+        <i class="fa fa-search"></i>
+        <input type="text" placeholder="Axtar..." name="search" />
+        <button class="search-btn">Axtar</button>
+      </div>
+      <div class="nav-language">
+        <div class="language-dropdown">
+          <button class="language-dropbtn">AZ</button>
+          <div class="language-dropdown-content">
+            <a href="#">RU</a>
+            <a href="#">EN</a>
+          </div>
+        </div>
+      </div>
+      <div class="nav-basket">
+        <a href="">🛒<sup class="basket-count">0</sup></a>
+      </div>
+      <div class="nav-auth"><a href="">Giriş</a> / <a href="">Qeydiyyat</a></div>
+
+      <div class="mobile-menu-toggle">☰</div>
+    </nav>
+
+    <!-- Top -->
+    <!-- =============================================== -->
+    <div class="top-go" id="homePageGo">
+      <i class="fa-solid fa-angles-up"></i>
+    </div>
+
+    <!-- =============================================== -->
+
+    <div class="service-page">
+      <!-- Sol filter menyusu -->
+      <aside class="service-filters">
+        <h3>Filtrlər</h3>
+
+        <div class="filter-group">
+          <label>Sahə & Peşə:</label>
+          <select id="categoryFilter">
+            <option value="">Hamısı</option>
+            <option value="web dizayn">Web Dizayn</option>
+            <option value="it və proqramlaşdırma">Proqramlaşdırma</option>
+            <option value="mühasib">Mühasib</option>
+            <option value="smm">SMM</option>
+            <option value="usta">Usta</option>
+            <option value="sürücü">Sürcü</option>
+          </select>
+        </div>
+
+        <div class="filter-group">
+          <label>Xidmət növü:</label>
+          <select id="shopTypeFilter">
+            <option value="">Hamısı</option>
+            <option value="uzaqdan">Uzaqdan</option>
+            <option value="fiziki">Fiziki</option>
+          </select>
+        </div>
+
+        <div class="filter-group">
+          <label>Rayon / Ünvan:</label>
+          <select id="locationFilter">
+            <option value="">Hamısı</option>
+            <option value="nəsimi">Nəsimi</option>
+            <option value="nərimanov">Nərimanov</option>
+            <option value="xətai">Xətai</option>
+          </select>
+        </div>
+
+        <div class="filter-group">
+          <label>Sırala:</label>
+          <select id="sortFilter">
+            <option value="">Ən yeni</option>
+            <option value="">Ən köhnə</option>
+          </select>
+        </div>
+      </aside>
+
+      <!-- Sağ tərəf: search + kartlar -->
+      <div class="service-content">
+        <div class="search-box">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" id="searchInput" placeholder="Xidmət axtar..." />
+        </div>
+
+        <div class="service-list">
+          <!-- Kart 1 -->
+          <div
+            class="service-card"
+            data-category="it və proqramlaşdırma"
+            data-shop-type="uzaqdan"
+            data-location="nəsimi"
+            data-created="2025-12-28T12:30:00"
+          >
+            <div class="service-card-images">
+              <div class="service-premium-icon"><i class="fa-solid fa-gem"></i></div>
+              <div class="image-indicators"></div>
+              <img src="https://picsum.photos/300/200?random=36" />
+              <img src="https://picsum.photos/300/200?random=42" />
+              <img src="https://picsum.photos/300/200?random=343" />
+            </div>
+            <div class="service-card-detail">
+              <div class="basket">
+                <button><i class="fa-solid fa-cart-plus"></i></button>
+              </div>
+              <a href="">
+                <div class="service-card-info">
+                  <div class="service-card-name">
+                    It və Proqramlaşdırma Web dizayn Tamam Basqa bir sahedir
+                  </div>
+                  <div class="service-price">45 AZN</div>
+                  <div class="service-card-bottom">
+                    <p><span>👁 160 baxış</span><span>4 gün əvvəl</span></p>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <!-- Kart 2 -->
+          <div
+            class="service-card"
+            data-category="web dizayn"
+            data-shop-type="fiziki"
+            data-location="nərimanov"
+            data-created="2025-12-25T09:00:00"
+          >
+            <div class="service-card-images">
+              <div class="service-premium-icon"><i class="fa-solid fa-gem"></i></div>
+              <div class="image-indicators"></div>
+              <img src="https://picsum.photos/300/200?random=12" />
+              <img src="https://picsum.photos/300/200?random=15" />
+              <img src="https://picsum.photos/300/200?random=19" />
+            </div>
+            <div class="service-card-detail">
+              <div class="basket">
+                <button><i class="fa-solid fa-cart-plus"></i></button>
+              </div>
+              <a href="">
+                <div class="service-card-info">
+                  <div class="service-card-name">Web Dizayn Xidmətləri</div>
+                  <div class="service-price">70 AZN</div>
+                  <div class="service-card-bottom">
+                    <p><span>👁 210 baxış</span><span>2 gün əvvəl</span></p>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <!-- Kart 3 -->
+          <div
+            class="service-card"
+            data-category="smm"
+            data-shop-type="uzaqdan"
+            data-location="xətai"
+            data-created="2025-12-20T15:45:00"
+          >
+            <div class="service-card-images">
+              <div class="service-premium-icon"><i class="fa-solid fa-gem"></i></div>
+              <div class="image-indicators"></div>
+              <img src="https://picsum.photos/300/200?random=25" />
+              <img src="https://picsum.photos/300/200?random=27" />
+              <img src="https://picsum.photos/300/200?random=29" />
+            </div>
+            <div class="service-card-detail">
+              <div class="basket">
+                <button><i class="fa-solid fa-cart-plus"></i></button>
+              </div>
+              <a href="">
+                <div class="service-card-info">
+                  <div class="service-card-name">SMM və Marketinq</div>
+                  <div class="service-price">55 AZN</div>
+                  <div class="service-card-bottom">
+                    <p><span>👁 180 baxış</span><span>1 gün əvvəl</span></p>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <!-- Kart 4 -->
+          <div
+            class="service-card"
+            data-category="mühasib"
+            data-shop-type="fiziki"
+            data-location="nəsimi"
+            data-created="2025-12-26T11:30:00"
+          >
+            <div class="service-card-images">
+              <div class="service-premium-icon"><i class="fa-solid fa-gem"></i></div>
+              <div class="image-indicators"></div>
+              <img src="https://picsum.photos/300/200?random=31" />
+              <img src="https://picsum.photos/300/200?random=33" />
+              <img src="https://picsum.photos/300/200?random=35" />
+            </div>
+            <div class="service-card-detail">
+              <div class="basket">
+                <button><i class="fa-solid fa-cart-plus"></i></button>
+              </div>
+              <a href="">
+                <div class="service-card-info">
+                  <div class="service-card-name">Mühasibat Xidmətləri</div>
+                  <div class="service-price">60 AZN</div>
+                  <div class="service-card-bottom">
+                    <p><span>👁 140 baxış</span><span>5 gün əvvəl</span></p>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <!-- Kart 5 -->
+          <div
+            class="service-card"
+            data-category="usta"
+            data-shop-type="fiziki"
+            data-location="nərimanov"
+            data-created="2025-12-27T14:20:00"
+          >
+            <div class="service-card-images">
+              <div class="service-premium-icon"><i class="fa-solid fa-gem"></i></div>
+              <div class="image-indicators"></div>
+              <img src="https://picsum.photos/300/200?random=41" />
+              <img src="https://picsum.photos/300/200?random=44" />
+              <img src="https://picsum.photos/300/200?random=47" />
+            </div>
+            <div class="service-card-detail">
+              <div class="basket">
+                <button><i class="fa-solid fa-cart-plus"></i></button>
+              </div>
+              <a href="">
+                <div class="service-card-info">
+                  <div class="service-card-name">Usta Xidmətləri</div>
+                  <div class="service-price">50 AZN</div>
+                  <div class="service-card-bottom">
+                    <p><span>👁 90 baxış</span><span>3 gün əvvəl</span></p>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- =============================================== -->
+    <!-- FOOTER -->
+    <footer>
+      <div class="footer-info">
+        <h3>biznest.az</h3>
+        <p><a href="">Layihə haqqında</a></p>
+        <p><a href="">Qaydalar</a></p>
+        <p><a href="">Dəstək mərkəzi və tez-tez verilən suallar </a></p>
+
+        <h3>Menu</h3>
+        <p><a href="../html/listing.html">Elanlar</a></p>
+        <p><a href="../html/service.html">Xidmət və Servis</a></p>
+        <p><a href="../html/shop.html">Mağazalar</a></p>
+      </div>
+      <div class="footer-contact">
+        <form action="">
+          <input type="text" placeholder="Ad Soyad" /><br />
+          <input type="email" placeholder="Email" /><br />
+          <input type="text" placeholder="Başlıq" /><br />
+          <textarea placeholder="Mesaj"></textarea>
+          <button class="message-send">Göndər</button>
+        </form>
+        <div class="sosial-media">
+          <a href=""><i class="fa-brands fa-instagram"></i></a>
+          <a href=""><i class="fa-brands fa-facebook"></i></a>
+          <a href=""><i class="fa-brands fa-tiktok"></i></a>
+        </div>
+      </div>
+    </footer>
+    <script src="../js/navbar.js"></script>
+    <script src="../js/back-to-top.js"></script>
+    <script src="../js/serviceImageAndCategory.js"></script>
+  </body>
+</html>

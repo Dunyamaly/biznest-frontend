@@ -1,0 +1,211 @@
+.service-page {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  margin-top: 100px;
+}
+
+.service-filters {
+  width: 220px;
+  background: #f9fafb;
+  padding: 20px;
+  border-radius: 14px;
+  transition: transform 0.2s ease;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 14px;
+}
+.filter-group label {
+  margin-bottom: 4px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #374151;
+}
+.filter-group select {
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  outline: none;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.service-content {
+  flex: 1;
+}
+.search-box {
+  position: relative;
+  width: 100%;
+  margin-bottom: 20px;
+}
+.search-box input {
+  width: 100%;
+  padding: 10px 14px 10px 40px;
+  border-radius: 10px;
+  border: 1px solid #d1d5db;
+  font-size: 14px;
+  outline: none;
+}
+.search-box i {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #9ca3af;
+}
+
+.service-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 180px);
+  gap: 18px;
+}
+
+.service-card {
+  width: 180px;
+  background: #fff;
+  border-radius: 6px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  transition: 0.25s ease;
+}
+
+.service-card:hover {
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.15);
+}
+.service-card-images {
+  height: 165px;
+  position: relative;
+  background: #f3f3f3;
+}
+
+.service-card-images img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 1;
+  transition: opacity 0.2s ease;
+}
+
+.image-indicators {
+  position: absolute;
+  top: 2px;
+  left: 6px;
+  right: 6px;
+  display: flex;
+  gap: 4px;
+  z-index: 5;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.service-card-images:hover .image-indicators {
+  opacity: 1;
+}
+
+.image-indicators span {
+  flex: 1;
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.2);
+  overflow: hidden;
+  border-radius: 2px;
+}
+
+.image-indicators span::after {
+  content: '';
+  display: block;
+  height: 100%;
+  width: 0%;
+  background-color: #fff;
+  transition: width 0.15s ease;
+}
+
+.image-indicators span.active::after {
+  width: 100%;
+}
+
+.service-premium-icon {
+  position: absolute;
+  top: 7px;
+  left: 5px;
+  display: flex;
+  z-index: 10;
+  gap: 4px;
+}
+
+.service-premium-icon i {
+  background: #fff;
+  font-size: 12px;
+  border-radius: 7px;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  padding: 6px 6px;
+  color: #e63946;
+}
+.basket {
+  position: absolute;
+  right: 5px;
+  top: 3px;
+  z-index: 10;
+}
+
+.basket button {
+  width: 35px;
+  height: 35px;
+  background: #111;
+  color: #ffffff;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  opacity: 0;
+  transition: 0.2s;
+}
+
+.service-card:hover .basket button {
+  opacity: 1;
+}
+
+.service-card-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100px;
+  padding: 5px 8px;
+}
+
+.service-card-detail a {
+  height: 100%;
+  text-decoration: none;
+  color: inherit;
+}
+
+.service-card-name {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.35;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.service-price {
+  font-size: 16px;
+  font-weight: 700;
+  color: #e63946;
+  margin-top: -6px;
+}
+
+.service-card-bottom p {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #666;
+  align-items: center;
+}

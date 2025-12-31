@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/shopPage.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BizNest.az Biznesini qur və səndə qazan</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav>
+      <div class="nav-logo"><a href="../index.html">BizNest</a></div>
+      <div class="nav-section">
+        <ul>
+          <li><a href="../html/listing.html">Elanlar</a></li>
+          <li><a href="../html/service.html">Xidmətlər</a></li>
+          <li><a href="../html/shop.html">Mağazalar</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-search">
+        <i class="fa fa-search"></i>
+        <input type="text" placeholder="Axtar..." name="search" />
+        <button class="search-btn">Axtar</button>
+      </div>
+      <div class="nav-language">
+        <div class="language-dropdown">
+          <button class="language-dropbtn">AZ</button>
+          <div class="language-dropdown-content">
+            <a href="#">RU</a>
+            <a href="#">EN</a>
+          </div>
+        </div>
+      </div>
+      <div class="nav-basket">
+        <a href="">🛒<sup class="basket-count">0</sup></a>
+      </div>
+      <div class="nav-auth"><a href="">Giriş</a> / <a href="">Qeydiyyat</a></div>
+
+      <div class="mobile-menu-toggle">☰</div>
+    </nav>
+
+    <!-- Top -->
+    <!-- =============================================== -->
+    <div class="top-go" id="homePageGo">
+      <i class="fa-solid fa-angles-up"></i>
+    </div>
+
+    <!-- =============================================== -->
+
+    <div class="shop-page">
+      <!-- Sol filter menyusu -->
+      <aside class="shop-filters">
+        <h3>Filtrlər</h3>
+
+        <div class="filter-group">
+          <label>Kateqoriya:</label>
+          <select id="categoryFilter">
+            <option value="">Hamısı</option>
+            <option value="elektronika">Elektronika</option>
+            <option value="parfumeriya">Parfumeriya</option>
+            <option value="geyim">Geyim</option>
+          </select>
+        </div>
+
+        <div class="filter-group">
+          <label>Mağaza növü:</label>
+          <select id="shopTypeFilter">
+            <option value="">Hamısı</option>
+            <option value="online">Online</option>
+            <option value="fiziki">Fiziki</option>
+          </select>
+        </div>
+
+        <div class="filter-group">
+          <label>Rayon / Ünvan:</label>
+          <select id="locationFilter">
+            <option value="">Hamısı</option>
+            <option value="nesimi">Nəsimi</option>
+            <option value="nerimanov">Nərimanov</option>
+            <option value="xetai">Xətai</option>
+          </select>
+        </div>
+
+        <div class="filter-group">
+          <label>Sıralama:</label>
+          <select id="sortFilter">
+            <option value="newest">Ən yeni</option>
+            <option value="offers">Təklif sayı</option>
+            <option value="az">A-Z</option>
+            <option value="za">Z-A</option>
+          </select>
+        </div>
+      </aside>
+
+      <!-- Sağ tərəf: search + kartlar -->
+      <div class="shop-content">
+        <div class="search-box">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" id="searchInput" placeholder="Mağaza axtar..." />
+        </div>
+
+        <div class="shop-list">
+          <div
+            class="shop-card"
+            data-name="B Market"
+            data-offers="27"
+            data-type="online"
+            data-category="elektronika"
+            data-location="nerimanov"
+          >
+            <!-- ÜST HİSSƏ -->
+            <a href="">
+              <div class="shop-header">
+                <img src="../img/logo.png" alt="Logo" class="shop-logo" />
+
+                <div class="shop-title-box">
+                  <h3 class="shop-name">B Market</h3>
+                  <span class="shop-offers">📌 27 elan</span>
+                </div>
+              </div>
+
+              <!-- AÇIQLAMA -->
+              <p class="shop-desc">Elektronika və texnologiya məhsullarının satışı</p>
+
+              <!-- ƏLAQƏ -->
+              <div class="shop-contact">📞 +994 50 123 45 67</div>
+
+              <!-- TAGLAR -->
+              <div class="shop-tags">
+                <span class="tag">📍 Nərimanov</span>
+                <span class="tag">🛒 Online</span>
+              </div>
+            </a>
+          </div>
+
+          <div
+            class="shop-card"
+            data-name="Adsiz Market"
+            data-offers="100"
+            data-type="fiziki"
+            data-category="elektronika"
+            data-location="nerimanov"
+          >
+            <!-- ÜST HİSSƏ -->
+            <a href="">
+              <div class="shop-header">
+                <img src="../img/logo.png" alt="Logo" class="shop-logo" />
+
+                <div class="shop-title-box">
+                  <h3 class="shop-name">Adsiz Market</h3>
+                  <span class="shop-offers">📌 100 elan</span>
+                </div>
+              </div>
+
+              <!-- AÇIQLAMA -->
+              <p class="shop-desc">Elektronika və texnologiya məhsullarının satışı</p>
+
+              <!-- ƏLAQƏ -->
+              <div class="shop-contact">📞 +994 50 123 45 67</div>
+
+              <!-- TAGLAR -->
+              <div class="shop-tags">
+                <span class="tag">📍 Nərimanov</span>
+                <span class="tag">🛒 Bakı</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- =============================================== -->
+    <!-- FOOTER -->
+    <footer>
+      <div class="footer-info">
+        <h3>biznest.az</h3>
+        <p><a href="">Layihə haqqında</a></p>
+        <p><a href="">Qaydalar</a></p>
+        <p><a href="">Dəstək mərkəzi və tez-tez verilən suallar </a></p>
+
+        <h3>Menu</h3>
+        <p><a href="../html/listing.html">Elanlar</a></p>
+        <p><a href="../html/service.html">Xidmət və Servis</a></p>
+        <p><a href="../html/shop.html">Mağazalar</a></p>
+      </div>
+      <div class="footer-contact">
+        <form action="">
+          <input type="text" placeholder="Ad Soyad" /><br />
+          <input type="email" placeholder="Email" /><br />
+          <input type="text" placeholder="Başlıq" /><br />
+          <textarea placeholder="Mesaj"></textarea>
+          <button class="message-send">Göndər</button>
+        </form>
+        <div class="sosial-media">
+          <a href=""><i class="fa-brands fa-instagram"></i></a>
+          <a href=""><i class="fa-brands fa-facebook"></i></a>
+          <a href=""><i class="fa-brands fa-tiktok"></i></a>
+        </div>
+      </div>
+    </footer>
+    <script src="../js/navbar.js"></script>
+    <script src="../js/back-to-top.js"></script>
+    <script src="../js/liveSearch.js"></script>
+  </body>
+</html>
