@@ -761,10 +761,9 @@ nav a {
 /* ========================================================= */
 
 .mix-card-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, 180px);
+   display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 18px 10px;
-  justify-content: start;
 }
 
 .sale-cards .premium-card-images {
