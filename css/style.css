@@ -68,7 +68,7 @@ nav a {
   display: flex;
   align-items: center;
   position: relative;
-  width: 30%;
+  width: 27%;
 }
 
 .nav-search input:focus {
